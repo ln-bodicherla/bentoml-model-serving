@@ -1,0 +1,13 @@
+service: "src.service:FraudDetectionService"
+include:
+  - "src/*.py"
+  - "configs/*.yaml"
+python:
+  requirements_txt: "requirements.txt"
+docker:
+  distro: "debian"
+  python_version: "3.11"
+  cuda_version: null
+  setup_script: null
+  system_packages:
+    - "libgomp1"

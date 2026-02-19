@@ -1,0 +1,53 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# BentoML
+bentos/
+/bentoml/
+
+# Model artifacts
+models/
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.bin
+
+# Data
+data/
+*.csv
+*.parquet
+
+# Benchmarks
+benchmark_results/
+*.json
+
+# Docker
+*.tar
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
