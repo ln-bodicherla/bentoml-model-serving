@@ -1,53 +1,71 @@
+
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-*.egg-info/
-dist/
-build/
-*.egg
+!.env.example
+!.env.sample
+.build/
+.DS_Store
 .eggs/
-
-# Virtual environments
-venv/
-env/
-.venv/
-
-# IDE
-.vscode/
+.env
+.env.*
 .idea/
-*.swp
-*.swo
-*~
-
-# BentoML
-bentos/
-/bentoml/
-
-# Model artifacts
-models/
-*.pkl
+.swiftpm/
+.venv/
+.vscode/
+*.app
+*.bin
+*.csv
+*.db
+*.db-shm
+*.db-wal
+*.egg
+*.egg-info/
+*.ipa
 *.joblib
+*.json
+*.key
+*.log
+*.parquet
+*.pem
+*.pkl
 *.pt
 *.pth
-*.bin
-
-# Data
-data/
-*.csv
-*.parquet
-
-# Benchmarks
-benchmark_results/
-*.json
-
-# Docker
+*.py[cod]
+*.pyc
+*.secret
+*.so
+*.sqlite
+*.sqlite3
+*.swo
+*.swp
 *.tar
-
-# OS
-.DS_Store
-Thumbs.db
-
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*~
+*$py.class
+/bentoml/
+# Benchmarks
+# BentoML
+# Build
+# Data
+# Databases
+# Dependencies
+# Docker
+# IDE
 # Logs
-*.log
+# Model artifacts
+# OS
+# Secrets
+# Virtual environments
+benchmark_results/
+bentos/
+build/
+credentials*
+data/
+DerivedData/
+dist/
+env/
 logs/
+models/
+node_modules/
+Thumbs.db
+venv/
