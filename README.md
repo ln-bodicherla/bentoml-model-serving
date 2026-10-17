@@ -1,10 +1,10 @@
 # BentoML Model Serving
 
-Production ML model serving using BentoML. Features adaptive micro-batching, model packaging (Bentos), containerization, and deployment support. Provides a unified serving interface for multiple ML frameworks including scikit-learn, XGBoost, PyTorch, and Hugging Face Transformers.
+ML model serving using BentoML. Features adaptive micro-batching, model packaging (Bentos), containerization, and deployment support. Provides a unified serving interface for multiple ML frameworks including scikit-learn, XGBoost, PyTorch, and Hugging Face Transformers.
 
 ## Overview
 
-This project demonstrates production-grade ML model serving with BentoML's opinionated framework. The primary use case is a fraud detection service that supports single and batch predictions with automatic adaptive batching, input validation, and Prometheus metrics export.
+This project demonstrates ML model serving with BentoML's opinionated framework. The example use case is a fraud detection service that supports single and batch predictions with automatic adaptive batching, input validation, and Prometheus metrics export. The demo models are trained on generated synthetic data.
 
 ## Alternative Approach Note
 
@@ -76,12 +76,7 @@ docker run -p 3000:3000 fraud_detection:latest
 
 ## Benchmarks
 
-| Metric              | BentoML        | FastAPI (Custom) |
-|---------------------|----------------|-----------------|
-| p50 Latency (ms)    | 2.1            | 1.8             |
-| p99 Latency (ms)    | 8.5            | 12.3            |
-| Throughput (req/s)   | 4,200          | 3,100           |
-| Batch Efficiency     | 92%            | N/A (manual)    |
+No benchmark results are published in this repository. With the service running, `python -m src.benchmark --url http://localhost:3000` measures request latency percentiles, throughput under concurrent load (`--concurrency`, `--duration`) and batching behaviour, and writes a JSON report to `benchmark_results/report.json` (use `--test latency|throughput|batching|all` to pick tests). Results depend on your hardware and model.
 
 ## License
 
